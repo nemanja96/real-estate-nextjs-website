@@ -5,9 +5,7 @@ import styled from 'styled-components';
 const Nav = () => {
   return (
     <NavContainer>
-        <Link href="/">Početna</Link>
-        <Link href="/apartments">Apartmani</Link>
-        <Link href="/">Blog</Link>
+
     </NavContainer>
   )
 }

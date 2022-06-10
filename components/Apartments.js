@@ -33,13 +33,13 @@ export default Apartments
 const ApartmentsContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 100px;
     margin-bottom: 100px;
 `
 
 const ApartmentsWrapper = styled.div`
     display: grid;
-    gap: 20px;
+    gap: 40px;
     grid-template-columns: repeat(3, 1fr);
     width: 90%;
     max-width: 1200px;

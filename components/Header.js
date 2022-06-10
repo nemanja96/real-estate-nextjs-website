@@ -40,10 +40,22 @@ const Logo = styled(Image)`
 const Buttons = styled.div`
 
     > a {
-        margin: 0 20px;
-        padding: 12px 20px;
-        background: #000;
-        color: white;
+        display: block;
+        width: 130px;
+        height: 50px;
+        background: #21af69;
+        color: #fff;
+        border: none;
+        font-size: 1rem;
+        border-radius: 30px;
         font-weight: 600;
+        transition: .2s all;
+        cursor: pointer;
+        text-align: center;
+        line-height: 50px;
+
+        &:hover{
+            opacity: 0.8;
+        }
     }
 `

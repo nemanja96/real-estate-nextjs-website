@@ -78,7 +78,7 @@ const SingleRoom = ({ apartmentInfo }) => {
         <SingleRoomWrapper>
           <RoomMainInfo>
             <RoomTitleInfo>
-              <div><Link href="/">Početna</Link> / <Link href="/apartments">Apartmani</Link> / <strong style={{ color: "#EB5353" }}>{apartmentInfo?.title}</strong></div>
+              <div><Link href="/">Početna</Link> / <Link href="/apartments">Apartmani</Link> / <strong style={{ color: "#21af69" }}>{apartmentInfo?.title}</strong></div>
               <h2>{apartmentInfo?.title}</h2>
               <h3>{apartmentInfo?.address}, {apartmentInfo?.city}</h3>
             </RoomTitleInfo>
@@ -180,6 +180,11 @@ const RoomTitleInfo = styled.div`
     color: #888;
     font-weight: 400;
     font-size: 1rem;
+    transition: .2s all;
+    
+    &:hover{
+      color: #21af69;
+    }
   }
 
   > h2 {
@@ -207,7 +212,7 @@ const RoomPriceInfo = styled.div`
     margin: 0;
     line-height: 1em;
     font-weight: 500;
-    color: #EB5353;
+    color: #21af69;
   }
 `
 
@@ -247,7 +252,7 @@ const RoomDetailsOverview = styled.div`
       > .MuiSvgIcon-root {
         width: 35px !important;
         height: 35px !important;
-        color: #EB5353 !important;
+        color: #21af69 !important;
       }
 
       > h4 {
@@ -285,7 +290,7 @@ const RoomDescription = styled.div`
     transition: .1s all;
 
     &:hover{
-      color: #EB5353;
+      color: #21af69;
     }
   }
 `
@@ -324,7 +329,7 @@ const OwnerDetails = styled.div`
 `
 
 const ContactOwner = styled(Button)`
-  background: #EB5353 !important;
+  background: #21af69 !important;
   color: white !important;
   margin-top: 10px !important;
 `

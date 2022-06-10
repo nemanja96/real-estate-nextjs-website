@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Apartments from '../components/Apartments';
-import { GraphQLClient , gql } from 'graphql-request'
+import { GraphQLClient , gql } from 'graphql-request';
+import Hero from '../components/Hero';
 
 export const getStaticProps = async () => {
 
@@ -56,6 +57,13 @@ export default function ApartmentsPage({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Hero
+        title="Pogledajte naš veliki izbor apartmana"
+        description="Pretražite veliki izbor apartmana za Vaš savršen odmor."
+        buttonURL="/"
+        buttonText="Kontaktirajte nas"
+        imageURL="/01.jpg"
+      />
       <Apartments apartmentsData={data} />
 
     </div>

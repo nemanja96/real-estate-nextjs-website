@@ -55,8 +55,7 @@ const ApartmentImage = styled.div`
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
     display: flex;
     align-items: end;
 `
@@ -69,8 +68,7 @@ const ApartmentImageDetails = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: end;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
 
     > h4 {
         font-size: 1.2rem;
