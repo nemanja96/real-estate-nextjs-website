@@ -9,6 +9,8 @@ const Apartments = ({ apartmentsData }) => {
             {
                 apartmentsData.map(({title, address, slug, city, price, apartmentImage, owner, numberOfRooms, numberOfParkingPlace, numberOfToalets, propertySize}) => (
                     <ApartmentCard
+                        id={slug}
+                        key={slug}
                         title={title}
                         address={address}
                         price={price}
