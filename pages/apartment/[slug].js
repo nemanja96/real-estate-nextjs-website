@@ -122,7 +122,7 @@ const SingleRoom = ({ apartmentInfo }) => {
               </RoomDescription>
               <VideoDetails>
                 <h3>Video</h3>
-                <video width="100%" controls autoplay>
+                <video width="100%" controls>
                   <source src={videoUrl} type="video/mp4" />
                 </video>
               </VideoDetails>
