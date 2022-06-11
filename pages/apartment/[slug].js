@@ -78,7 +78,7 @@ const SingleRoom = ({ apartmentInfo }) => {
         <SingleRoomWrapper>
           <RoomMainInfo>
             <RoomTitleInfo>
-              <div><Link href="/">Početna</Link> / <Link href="/apartments">Apartmani</Link> / <strong style={{ color: "#21af69" }}>{apartmentInfo?.title}</strong></div>
+              <div><Link href="/">Početna</Link> / <strong style={{ color: "#21af69" }}>{apartmentInfo?.title}</strong></div>
               <h2>{apartmentInfo?.title}</h2>
               <h3>{apartmentInfo?.address}, {apartmentInfo?.city}</h3>
             </RoomTitleInfo>
@@ -122,7 +122,7 @@ const SingleRoom = ({ apartmentInfo }) => {
               </RoomDescription>
               <VideoDetails>
                 <h3>Video</h3>
-                <video width="100%" height="400px" controls autoplay>
+                <video width="100%" controls autoplay>
                   <source src={videoUrl} type="video/mp4" />
                 </video>
               </VideoDetails>
@@ -171,6 +171,10 @@ const RoomMainInfo = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 630px){
+      flex-direction: column;
+    }
 `
 
 const RoomTitleInfo = styled.div`
@@ -193,6 +197,10 @@ const RoomTitleInfo = styled.div`
     line-height: 1em;
     font-weight: 400;
     margin-top: 10px;
+
+    @media screen and (max-width: 630px){
+      text-align: center;
+    }
   }
 
   > h3 {
@@ -202,6 +210,10 @@ const RoomTitleInfo = styled.div`
     font-size: 1rem;
     color: #888;
     font-weight: 400;
+
+    @media screen and (max-width: 630px){
+      text-align: center;
+    }
   }
 `
 
@@ -213,12 +225,20 @@ const RoomPriceInfo = styled.div`
     line-height: 1em;
     font-weight: 500;
     color: #21af69;
+
+    @media screen and (max-width: 630px){
+      margin-top: 20px;
+    }
   }
 `
 
 const RoomDetailsContainer = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 900px){
+      flex-direction: column;
+    }
 `
 
 const RoomDetailsLeft = styled.div`
@@ -231,10 +251,18 @@ const RoomDetailsOverview = styled.div`
   border-radius: 10px;
   margin-top: 40px;
 
+  @media screen and (max-width: 550px){
+    padding: 20px 20px 25px 20px;
+  }
+
   > h3 {
     margin: 0;
     font-weight: 500;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 550px){
+      text-align: center;
+    }
   }
 
   > ul {
@@ -244,15 +272,29 @@ const RoomDetailsOverview = styled.div`
     margin: 0;
     padding: 0;
 
+    @media screen and (max-width: 550px){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
     > li {
       display: flex;
       flex-direction: column;
       align-items: center;
 
+      @media screen and (max-width: 550px){
+        margin-bottom: 15px;
+      }
+
       > .MuiSvgIcon-root {
         width: 35px !important;
         height: 35px !important;
         color: #21af69 !important;
+
+        @media screen and (max-width: 400px){
+          width: 30px !important;
+          height: 30px !important;
+        }
       }
 
       > h4 {
@@ -273,15 +315,33 @@ const RoomDescription = styled.div`
   border-radius: 10px;
   margin-top: 40px;
 
+  @media screen and (max-width: 550px){
+    padding: 20px 20px 25px 20px;
+  }
+
   > h3 {
     margin: 0;
     font-weight: 500;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 550px){
+      text-align: center;
+    }
   }
 
   > p {
     font-size: 0.9rem;
     color: #666;
+
+    @media screen and (max-width: 550px){
+      text-align: center;
+    }
+  }
+
+  > br {
+    @media screen and (max-width: 550px){
+      display: none;
+    }
   }
 
   > a {
@@ -292,6 +352,11 @@ const RoomDescription = styled.div`
     &:hover{
       color: #21af69;
     }
+
+    @media screen and (max-width: 550px){
+      display: block;
+      text-align: center;
+    }
   }
 `
 
@@ -301,10 +366,24 @@ const VideoDetails = styled.div`
   border-radius: 10px;
   margin-top: 40px;
 
+  @media screen and (max-width: 550px){
+      padding: 20px 20px 25px 20px;
+  }
+
   > h3 {
     margin: 0;
     font-weight: 500;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 550px){
+      text-align: center;
+    }
+  }
+
+  > video {
+    margin: 0;
+    padding: 0;
+    height: auto !important;
   }
 `
 
@@ -321,10 +400,11 @@ const OwnerDetails = styled.div`
   flex-direction: column;
   align-items: center;
 
-  > h3, h4 {
+  > h3 {
     margin: 0;
     font-weight: 500;
     margin-top: 10px;
+    text-align: center;
   }
 `
 

@@ -53,6 +53,10 @@ const HeroLeft = styled.div`
   align-items: center;
   flex-direction: column;
 
+  @media screen and (max-width: 400px){
+    padding: 20px 0px 70px 0px;
+  }
+
     > h1{
         text-align: center;
         font-size: 4.5rem;
@@ -60,6 +64,16 @@ const HeroLeft = styled.div`
         margin: 0;
         color: white;
         max-width: 70%;
+
+        @media screen and (max-width: 900px){
+          font-size: 3.5rem;
+          max-width: 80%;
+        }
+
+        @media screen and (max-width: 650px){
+          font-size: 2.5rem;
+          max-width: 90%;
+        }
     }
 
     > p{
@@ -68,6 +82,7 @@ const HeroLeft = styled.div`
         font-size: 1.2rem;
         color: white;
         max-width: 70%;
+        text-align: center;
     }
 
     > a {

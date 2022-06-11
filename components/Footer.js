@@ -66,6 +66,10 @@ const FooterWrapper = styled.div`
     max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: 1000px){
+        grid-template-columns: auto;
+    }
 `
 
 const FooterLeft = styled.div`
@@ -84,6 +88,16 @@ const FooterRight = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
+
+    @media screen and (max-width: 550px){
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    @media screen and (max-width: 400px){
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
 `
 
 const FooterCard = styled.div`
@@ -117,21 +131,40 @@ const Copyright = styled.div`
     padding-top: 10px;
     padding-bottom: 10px;
     border-top: 1px solid #ddd;
+
+    @media screen and (max-width: 770px){
+        flex-direction: column;
+    }
 `
 
 const CopyrightLeft = styled.div`
     > p {
         font-size: 0.9rem;
         color: #888;
+
+        @media screen and (max-width: 770px){
+            line-height: 1em;
+            margin: 5px;
+        }
+
+        @media screen and (max-width: 450px){
+            text-align: center;
+        }
     }
 `
 
 const CopyrightRight = styled.div`
+    @media screen and (max-width: 450px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     > a {
         font-size: 0.9rem;
         margin: 0 10px;
         color: #888;
-        transition: .2s all;
+        transition: .2s all;  
 
         &:hover{
             color: #21af69;

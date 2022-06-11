@@ -2,16 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import Link from 'next/link';
-import Nav from './Nav.js';
 
 const Header = () => {
   return (
     <HeaderContainer>
         <HeaderWrapper>
-            <Logo src="/door-key.png" width={50} height={50} />
-            <Nav />
+            <Link href="/"><Logo src="/door-key.png" width={50} height={50} /></Link>
             <Buttons>
-                <Link href="#">Kontakt</Link>
+                <Link href="/">Početna</Link>
             </Buttons>
         </HeaderWrapper>
     </HeaderContainer>
@@ -35,6 +33,7 @@ const HeaderWrapper = styled.div`
 `
 
 const Logo = styled(Image)`
+    cursor: pointer;
 `
 
 const Buttons = styled.div`

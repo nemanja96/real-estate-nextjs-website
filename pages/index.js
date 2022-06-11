@@ -60,7 +60,7 @@ export default function Home({data}) {
       <Hero
         title="Pronađite idealan smeštaj za Vaš sledeći odmor."
         description="Pretražite veliki izbor apartmana za Vaš savršen odmor."
-        buttonURL="/apartments" buttonText="Svi apartmani"
+        buttonURL="/" buttonText="Kontakt"
         imageURL="/01.jpg"
       />
       <Apartments apartmentsData={data} />

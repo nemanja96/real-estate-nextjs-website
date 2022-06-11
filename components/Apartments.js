@@ -35,6 +35,11 @@ const ApartmentsContainer = styled.div`
     justify-content: center;
     margin-top: 100px;
     margin-bottom: 100px;
+
+    @media screen and (max-width: 770px){
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 `
 
 const ApartmentsWrapper = styled.div`
@@ -43,4 +48,12 @@ const ApartmentsWrapper = styled.div`
     grid-template-columns: repeat(3, 1fr);
     width: 90%;
     max-width: 1200px;
+
+    @media screen and (max-width: 900px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 650px){
+        grid-template-columns: repeat(1, 1fr);
+    }
 `
